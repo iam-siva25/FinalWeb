@@ -1,0 +1,361 @@
+/* General Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 245, 255, 0.9));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.header.scrolled {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(245, 250, 255, 1));
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.02);
+}
+
+.logo-img {
+  height: 45px;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text-primary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0a66c2;
+  letter-spacing: -0.5px;
+}
+
+.logo-text-secondary {
+  font-size: 0.9rem;
+  color: #5a6a80;
+  font-weight: 400;
+}
+
+/* Desktop Navigation */
+.desktop-nav .nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0a66c2;
+}
+
+/* Dropdown Styles */
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  color: #0a66c2;
+}
+
+.dropdown-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown.open .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  min-width: 260px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+.dropdown.open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-link:hover {
+  background: #f0f5ff;
+  transform: translateX(5px);
+}
+
+.service-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  background-size: contain;
+}
+.dropdown-link h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dropdown-link p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* CTA Button */
+.cta-button {
+  background: linear-gradient(135deg, #0a66c2, #4c8bf5);
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(10, 102, 194, 0.3);
+}
+
+.cta-hover-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(0);
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+.cta-button:hover .cta-hover-effect {
+  transform: scale(2);
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  transform: scale(1.1);
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .cta-button {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: white;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-nav.open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .mobile-nav-item {
+    margin: 1rem 0;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav-link:hover {
+    color: #0a66c2;
+  }
+
+  .mobile-dropdown-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    cursor: pointer;
+  }
+
+  .mobile-dropdown-icon.rotate {
+    transform: rotate(180deg);
+  }
+
+  .mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-left: 1.5rem;
+  }
+
+  .mobile-dropdown-menu.open {
+    max-height: 300px; /* Adjust based on content */
+  }
+
+  .mobile-dropdown-link {
+    display: block;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.75rem 0;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-dropdown-link:hover {
+    color: #0a66c2;
+  }
+
+  .mobile-cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #0a66c2, #4c8bf5);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(10, 102, 194, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem;
+  }
+
+  .logo-img {
+    height: 35px;
+  }
+
+  .logo-text-primary {
+    font-size: 1.3rem;
+  }
+
+  .logo-text-secondary {
+    font-size: 0.8rem;
+  }
+}

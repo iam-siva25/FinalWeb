@@ -1,0 +1,124 @@
+/* Contact Form Section Styles */
+.contact-form {
+  padding: 6rem 2rem;
+  background: #f4f8fb;  /* A lighter background */
+  min-height: 100vh; /* Ensures it takes full height */
+  display: flex;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  color: #2d9cdb; /* Updated to a fresh blue color */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2f3a45; /* Darker shade for heading */
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #6c757d;  /* Softer color for description */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  border: 1px solid #d1d7e6;  /* Lighter border for inputs */
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #2f3a45; /* Same color as the heading for consistency */
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b9eff;  /* Updated to a brighter focus color */
+  box-shadow: 0 0 0 3px rgba(59, 158, 255, 0.2);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #3b9eff, #81b6f2); /* Updated gradient */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 200px;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(59, 158, 255, 0.3);
+}
+
+.submit-button:disabled {
+  background: #b0bec5;  /* Disabled state color */
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 4rem 1rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-button {
+    max-width: 100%;
+  }
+}
