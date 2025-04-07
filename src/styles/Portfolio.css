@@ -1,0 +1,48 @@
+.portfolio-section {
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-image {
+  max-width: 400px;
+  width: 100%;
+  margin: 1rem auto;
+  border-radius: 12px;
+}
+
+.portfolio-text {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #555;
+}
+
+.portfolio-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.portfolio-list li {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.portfolio-note {
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.portfolio-note a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.portfolio-note a:hover {
+  text-decoration: underline;
+}

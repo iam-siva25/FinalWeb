@@ -7,6 +7,7 @@ import ContactForm from './components/ContactForm';
 import AboutUs from './components/AboutUs';
 import Aerospace from './components/WebServices';
 import IndustryServices from './components/industryServices';
+import Portfolio from './components/Portfolio';
 function App() {
   return (
     <div className="App">
@@ -40,6 +41,12 @@ function App() {
           <Route path="/aerospace-tech" element={
             <>
               <IndustryServices />
+              <Footer />
+            </>
+          } />
+          <Route path="/portfolio" element={
+            <>
+              <Portfolio />
               <Footer />
             </>
           } />
